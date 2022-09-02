@@ -1,0 +1,9 @@
+.main-element {
+    border: 2px black solid;
+    margin-bottom: 2vw;
+    min-width: 50%;
+}
+
+.container {
+    padding: 0 20vw;
+}
