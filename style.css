@@ -1,9 +1,56 @@
+body {
+    background: linear-gradient(170deg,  #fefefe 25%, #eee 25%, #eee 75%, #ddd 75%) no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
 .main-element {
-    border: 2px black solid;
-    margin-bottom: 2vw;
-    min-width: 50%;
+    display: flex;
+    padding: 1vw;
+    background: #fafafa;
+    box-shadow: 0 0 20px 2px #bbb;
+    border: 1px #afafaf solid;
+    margin-bottom: 40px;
+    min-width: 50vw;
+}
+
+.main-element:nth-child(1) {
+    justify-content: space-around;
+    height: 34px;
 }
 
 .container {
-    padding: 0 20vw;
+    padding: 5vw 25vw;
+}
+
+.plus {
+    filter: invert(40%);
+    margin: 0;
+    padding: 0;
+}
+
+.input {
+    display: flex;
+    width: 40vw;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    width: 45vw;
+}
+
+.delete {
+    transform: rotate(45deg) scale(1.1);
+    width: 34px;
+    height: 34px;
+}
+
+.li-text {
+    position: relative;
+    top: -9px;
 }
