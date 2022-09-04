@@ -1,5 +1,28 @@
+:root {
+    --color-border: #afafaf;
+    --bg-c1: #fefefe;
+    --bg-c2: #eee;
+    --bg-c3: #ddd;
+    --main-bg: #fafafa;
+    --box-sd: #bbb;
+    --txt-clr: #050505;
+    --inv: 10%;
+}
+
+.dark-theme {
+    --color-border: #444;
+    --bg-c1: #353535;
+    --bg-c2: #454545;
+    --bg-c3: #555;
+    --main-bg: #555555;
+    --box-sd: #333;
+    --txt-clr: #ebebeb;
+    --inv: 90%;
+}
+
 body {
-    background: linear-gradient(170deg,  #fefefe 25%, #eee 25%, #eee 75%, #ddd 75%) no-repeat;
+    color: var(--txt-clr);
+    background: linear-gradient(170deg, var(--bg-c1) 25%, var(--bg-c2) 25%,var(--bg-c2) 75%, var(--bg-c3) 75%) no-repeat;
     background-size: cover;
     min-height: 100vh;
     padding: 0;
@@ -9,9 +32,9 @@ body {
 .main-element {
     display: flex;
     padding: 1vw;
-    background: #fafafa;
-    box-shadow: 0 0 20px 2px #bbb;
-    border: 1px #afafaf solid;
+    background: var(--main-bg);
+    box-shadow: 0 0 20px 2px var(--box-sd);
+    border: 1px var(--color-border) solid;
     margin-bottom: 40px;
     min-width: 50vw;
 }
@@ -26,7 +49,7 @@ body {
 }
 
 .plus {
-    filter: invert(40%);
+    filter: invert(var(--inv));
     margin: 0;
     padding: 0;
 }
@@ -42,9 +65,11 @@ li {
     display: flex;
     justify-content: space-between;
     width: 45vw;
+    border-top: 1px var(--color-border) solid;
 }
 
 .delete {
+    filter: invert(var(--inv));
     transform: rotate(45deg) scale(1.1);
     width: 34px;
     height: 34px;
@@ -53,4 +78,17 @@ li {
 .li-text {
     position: relative;
     top: -9px;
+}
+
+#theme {
+    width: 60px;
+    height: 60px;
+    filter: invert(var(--inv));
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+img{
+    cursor: pointer;
 }
