@@ -32,9 +32,25 @@ btn.onclick = function () {
 }
 
 if (localStorage.getItem('localDark') == 'false') {
-    body.className = ""
-    btn.src = "./img/sun.png"
+    black.style.opacity = "1"
+    black.style.zIndex = "999"
+    setTimeout(() => {
+        body.className = ""
+        btn.src = "./img/sun.png"
+        setTimeout(()=>{
+            black.style.opacity = "0"
+            black.style.zIndex = "-1"
+        }, 100)
+    }, 300);
 } else {
-    body.className = "dark-theme"
-    btn.src = "./img/moon.png"
+    black.style.opacity = "1"
+    black.style.zIndex = "999"
+    setTimeout(()=>{
+        body.className = "dark-theme"
+        btn.src = "./img/moon.png"
+        setTimeout(()=>{
+            black.style.opacity = "0"
+            black.style.zIndex = "-1"
+        }, 100)
+    }, 300)
 }

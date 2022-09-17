@@ -56,6 +56,13 @@ body {
     padding: 0;
 }
 
+#clear{
+    margin: 0;
+    padding: 0;
+    margin-left: calc(25vw - 54px);
+    filter: invert(var(--inv));
+}
+
 .input {
     display: flex;
     width: 40vw;
